@@ -1,0 +1,81 @@
+Hi bro ✋
+In this file I will manage all steps in order to create a Fullstack MERN project from scratch 💻
+
+✔️ PROJECT DESCRIPTION:
+    - Dashboard with all CRUD(create,read,update,delete) operations
+
+✔️ TECHNOLOGIES:
+    - REFINE
+
+❎ STEP 1 SETUP
+    - In new folder used command "npm create refine-app@latest client"
+
+    - choosed following settings for intializing project :
+        1) Choose a project template ===> "refine(CRA)"
+        2) What would you like to name your project? ===> "client"
+        3) Choose your backend service to connect ===> "REST API"
+        4) Do you want to use a UI Framework? ===> Material UI
+        5) Do you want to add example pages? ===> "Yes"
+        6) Do you want to add dark mode support? ===> "Yes"
+        7) Do you want to customize the Material UI theme? ===> "Yes"
+        8) Do you want to customize the Material UI layout? ===> "Yes"
+        9) Do you need any Authentication logic? ===> "Google"
+        10) Do you need i18n (Internationalization) support? ===> "No"
+        11) Do you want to add kbar command interface support? ===> "No"
+        🆗 PROJECT WAS SUCCESFULLY INITIALIZED
+
+    - installed other libraries using command "npm install apexcharts react-apexcharts"
+        🆗 Other libraries WAS SUCCESFULLY INITIALIZED
+
+    - added src/assets (which contains logo pictures)
+    - connected fonts from Google Fonts in <head></head> of public/index.html 
+    - created src/index.css with some basic CSS styling and enabled the font
+    /
+    - created src/constants/index.ts with const properyReferralsInfo
+    - created utils/validateForm.ts
+    - imported new src/interfaces
+    - imported src/components/charts/chart.config.ts
+
+    - on https://console.cloud.google.com/ created new project and API with OAuth Client ID
+    - in src/pages/login.tsx imported google api client id from .env file
+
+    /
+    - cleared background and changed logo on login.tsx
+    - changed components/layout/sider, layout/header, layout/title
+    - added all pages structure and changed all sider navigation
+    - added components structure
+
+    - added PieChart, TotalRevenue chart, PropertyReferrals chart
+
+    - added CreateProperty - Form
+
+    /*SERVER*/
+    - created server project and used command "npm install cloudinary cors dotenv express mongoose nodemon"
+    - initialized express app with cors middleware and main route
+    - i created a new cluster in MongoDB Atlas and set the MONGODB_URL in .env
+    - i connected to MongoDB and runned a http://localhost:8080
+    - created mongodb/models/user.js with Schema and Model for "User", Schema & Model for "Property"
+
+    - created routes and controllers for 'User' and 'Property'
+    - hooked up routes in index.js
+
+    /*CLIENT*/
+    - When logging Added Function in App.tsx for sending request to mongoDb for creating a new user in DB
+
+    /*SERVER*/
+    - Added endpoint for createUser in mongoDB
+    - Registered in cloudinary and added to .env APIKEYS
+    - Created controller for createProperty in mongoDB
+
+    /*SERVER and CLIENT*/
+    - added the main route for API requests in App.tsx
+    - small bugs in client and server for successfully createProperty
+
+    /*CLIENT*/
+    - Requesting allProperties with useTable hook, and rendering PropertyCard
+    - Created Sort Price, Search by title, Select Filter, Pagination, HowManyItemsOnPage LAYOUT
+    - In SERVER controller for getProperties added functions for sorting, filtering, PAGINATION
+    - In CLIENT page added all functionality for Sort Price, Searcy by title, Select Filect, Pagination
+
+
+    --NEXT CHANGES SEE IN GITHUB
